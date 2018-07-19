@@ -37,6 +37,7 @@
     "clipboard": "1.7.1",
     "codemirror": "5.32.0",
     "connect": "3.6.6",
+    "cross-spawn": "^6.0.5",
     "driver.js": "0.5.2",
     "dropzone": "5.2.0",
     "echarts": "3.8.5",
