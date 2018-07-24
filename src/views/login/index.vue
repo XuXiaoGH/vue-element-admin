@@ -77,8 +77,8 @@ export default {
     }
     return {
       loginForm: {
-        username: 'admin',
-        password: '1111111'
+        username: '13552148757',
+        password: '112233'
       },
       loginRules: {
         username: [{ required: true, trigger: 'blur', validator: validateUsername }],
@@ -103,6 +103,7 @@ export default {
           this.loading = true
           this.$store.dispatch('LoginByUsername', this.loginForm).then(() => {
             this.loading = false
+            console.log('hahhahah')
             this.$router.push({ path: '/' })
           }).catch(() => {
             this.loading = false

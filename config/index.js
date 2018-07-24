@@ -10,7 +10,16 @@ module.exports = {
     // Paths
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
-    proxyTable: {},
+    proxyTable: {
+      // 将所有以 /api 开头的请求通过 jsonplaceholder 代理
+      '/api': {
+        target: 'http://tzgs.pietian.com/index.php/Home/',
+        changeOrigin: true,
+        pathRewrite: {
+          '^/api': ''
+        }
+      }
+    },
 
     // Various Dev Server settings
 
