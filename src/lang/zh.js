@@ -2,6 +2,18 @@ export default {
   route: {
     dashboard: '首页',
     introduction: '简述',
+    
+    
+    info: '信息',
+    program: '项目',
+    manager: '管理',
+    infoManager: '信息管理',
+    programManager: '项目管理',
+    programFen: '项目评分',
+    programSche: '项目进度',
+    contact: '联系人',
+    tzIndex: '特种内部',
+
     documentation: '文档',
     guide: '引导页',
     permission: '权限测试页',

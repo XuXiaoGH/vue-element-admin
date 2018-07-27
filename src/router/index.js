@@ -40,28 +40,96 @@ export const constantRouterMap = [
       meta: { title: 'dashboard', icon: 'dashboard', noCache: true }
     }]
   },
+
   {
-    path: '/documentation',
+    path: '/info',
     component: Layout,
-    redirect: '/documentation/index',
+    redirect: '/info/index',
+    children: [{
+      path: 'index',
+      component: () => import('@/views/info/index'),
+      name: 'info',
+      meta: { title: 'info', icon: 'documentation', noCache: true }
+    }]
+  },
+
+  {
+    path: '/program',
+    component: Layout,
+    redirect: '/program/index',
+    children: [{
+      path: 'index',
+      component: () => import('@/views/info/index'),
+      name: 'info',
+      meta: { title: 'program', icon: 'documentation', noCache: true }
+    }]
+  },
+
+
+  {
+    path: '/manager',
+    component: Layout,
+    redirect: '/program/index',
+    alwaysShow: true, // will always show the root menu
+    meta: {
+      title: 'manager',
+      icon: 'lock',
+      roles: ['admin', 'editor'] // you can set roles in root nav
+    },
+    children: [
+      {
+        path: 'infoManager',
+        component: () => import('@/views/documentation/index'),
+        name: 'infoManager',
+        meta: { title: 'infoManager', icon: 'documentation', noCache: true }
+      },
+      {
+        path: 'programManager',
+        component: () => import('@/views/documentation/index'),
+        name: 'programManager',
+        meta: { title: 'programManager', icon: 'documentation', noCache: true }
+      },
+      {
+        path: 'programFen',
+        component: () => import('@/views/documentation/index'),
+        name: 'programFen',
+        meta: { title: 'programFen', icon: 'documentation', noCache: true }
+      },
+      {
+        path: 'programSche',
+        component: () => import('@/views/documentation/index'),
+        name: 'programSche',
+        meta: { title: 'programSche', icon: 'documentation', noCache: true }
+      }
+  
+    ]
+  },
+
+  {
+    path: '/contact',
+    component: Layout,
+    redirect: '/contact/index',
     children: [{
       path: 'index',
       component: () => import('@/views/documentation/index'),
-      name: 'documentation',
-      meta: { title: 'documentation', icon: 'documentation', noCache: true }
+      name: 'contact',
+      meta: { title: 'contact', icon: 'documentation', noCache: true }
     }]
   },
+
   {
-    path: '/guide',
+    path: '/tzIndex',
     component: Layout,
-    redirect: '/guide/index',
+    redirect: '/tzIndex/index',
     children: [{
       path: 'index',
-      component: () => import('@/views/guide/index'),
-      name: 'guide',
-      meta: { title: 'guide', icon: 'guide', noCache: true }
+      component: () => import('@/views/documentation/index'),
+      name: 'tzIndex',
+      meta: { title: 'tzIndex', icon: 'documentation', noCache: true }
     }]
-  }
+  },
+
+
 ]
 
 export default new Router({
@@ -70,7 +138,9 @@ export default new Router({
   routes: constantRouterMap
 })
 
-export const asyncRouterMap = [
+export const asyncRouterMap = [];
+
+export const asyncRouterMap1 = [
   {
     path: '/permission',
     component: Layout,
