@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+        axios.get('/kyc/createAccount')
+            .then(function(response){
+                console.log(response);
+            })
+            .catch(function(err){
+                console.log(err);
+            });
+    </script>
+</head>
+<body>
+
+    <div>
+        <el-button type="primary">主要按钮</el-button>
+    </div>
+
+
+</body>
+</html>
