@@ -1,0 +1,50 @@
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.app-header,
+.app-footer {
+  height: 50px;
+  line-height: 50px;
+  background: antiquewhite;
+  text-align: center;
+}
+
+.app-body {
+  min-height: 500px;
+
+  a {
+    margin-left: 10px;
+
+    &:first-child {
+      margin-left: 0;
+    }
+  }
+}
+
+.menu-wrap {
+  display: inline-block;
+  width: 200px;
+  height: 100%;
+  background: #eee;
+}
+
+.menu-wrap a {
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+}
+
+.view-wrap {
+  height: 100%;
+  background: wheat;
+  flex: 1;
+
+  .test {
+    color: red;
+  }
+}

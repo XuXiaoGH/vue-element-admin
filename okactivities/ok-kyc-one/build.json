@@ -1,0 +1,9 @@
+{
+  "assets": {
+      "type": "command",
+      "cmd": "npm i && npm run build",
+      "dist": "dist",
+      "master": "master",
+      "override": true
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "manifest_version": 2,//对于chrome拓展只能为2
+  "name": "天气预报",//拓展名
+  "version": "1.0",//拓展版本号，每次上传谷歌商店都需要与上次版本号不一样
+  "description": "查看未来15天的天气情况",
+  "icons": {
+    "16": "img/icon.png",
+    "48": "img/icon.png",
+    "128": "img/icon.png"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "img/icon.png",
+      "38": "img/icon.png"
+    },
+    "default_title": "天气预报",
+    "default_popup": "popup.html"
+  },
+  "options_page": "options.html",
+  "permissions": [
+    "api.apishop.net/common/weather/get15DaysWeatherByArea"//chrome请求权限
+  ]
+}
